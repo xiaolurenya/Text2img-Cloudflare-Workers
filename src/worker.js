@@ -14,25 +14,25 @@ const AVAILABLE_MODELS = [
   {
     id: 'stable-diffusion-xl-base-1.0',
     name: 'Stable Diffusion XL Base 1.0',
-    description: 'Stability AI SDXL 文生图模型',
+    description: 'Stability AI SDXL 文生图模型（小路人）',
     key: '@cf/stabilityai/stable-diffusion-xl-base-1.0'
   },
   {
     id: 'flux-1-schnell',
     name: 'FLUX.1 [schnell]',
-    description: '精确细节表现的高性能文生图模型',
+    description: '小路人文生图精确细节高性能模型（小路人）',
     key: '@cf/black-forest-labs/flux-1-schnell'
   },
   {
     id: 'dreamshaper-8-lcm',
     name: 'DreamShaper 8 LCM',
-    description: '增强图像真实感的 SD 微调模型',
+    description: '小路人文生图增强图像真实感 SD 微调模型',
     key: '@cf/lykon/dreamshaper-8-lcm'
   },
   {
     id: 'stable-diffusion-xl-lightning',
     name: 'Stable Diffusion XL Lightning',
-    description: '更加高效的文生图模型',
+    description: '小路人文生图更加高效模型（小路人）',
     key: '@cf/bytedance/stable-diffusion-xl-lightning'
   }
 ];
@@ -250,3 +250,4 @@ export default {
     }
   },
 };
+

@@ -53,7 +53,7 @@ const RANDOM_PROMPTS = [
 
 // Passwords for authentication
 // demo: const PASSWORDS = ['P@ssw0rd']
-const PASSWORDS = []
+const PASSWORDS = ['Liwenfei@43']
 
 
 export default {
@@ -205,14 +205,15 @@ export default {
                 });
               }
             } else {
-                // Return the response directly
-                return new Response(response, {
-                  headers: {
-                    ...corsHeaders, 
-                    'content-type': 'image/png',
-                  },
-                });
-              }
+              // SDXL / Dreamshaper / Lightning: consume the streaming response first, then return
+              const imageBuffer = await response.blob();
+              return new Response(imageBuffer, {
+                headers: {
+                  ...corsHeaders,
+                  'content-type': 'image/png',
+                },
+              });
+            }
             } catch (aiError) {
             console.error('AI generation error:', aiError);
             return new Response(JSON.stringify({ 
